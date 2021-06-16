@@ -1,0 +1,50 @@
+{{>header}}
+ <h1> {{{mensaje}}}</h1> 
+<form class="row g-3" method="POST">
+  <div class="col-auto">
+    <label for="inputEmail2" class="visually-hidden">Usuario </label>
+    <input type="text" class="form-control-plaintext" id="usuario"placeholder="nombre" >
+  </div>
+  <div class="col-auto">
+    <label for="inputPassword2" class="visually-hidden">Contraseña</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Contraseña">
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn- mb-3" style="background-color:#4BB543;;"> Iniciar sesion  </button>
+  </div>
+</form>
+<form action="/coordinador" method="post">
+<h2>Crear curso</h2>
+<label for="id">Id</label>
+<input type="text" name="idCurso">
+
+<label for="nombre">Nombre</label>
+<input type="text" name="nombre">
+
+<label for="duracion">Duración</label>
+<input type="text" name="duracion">
+
+<label for="precio">Precio</label>
+<input type="text" name="precio">
+<input type="button" name="estado" value="disponible">
+<select name="modalidad" id="modalidad">
+	<option value="Presencial">Presencial</option>
+	<option value="Virtual">Virtual</option>
+</select>
+
+<select name="intensidadhoraria" id="intensidadhoraria">
+	<option value="7 Horas">7 Horas</option>
+	<option value="5 Horas">5 Horas</option>
+	<option value="6 Horas">6 Horas</option>
+</select>
+<div class="col-md-6">
+    <label for="cedula" class="form-label">Cedula</label>
+    <input type=" number" class="form-control" id="cedula"name="cedulaEst" value="">
+  </div>
+<label for="descrip">Descripción</label>
+<input type="text" name="descripcion"> 
+<input type="submit">
+</form>
+	
+	{{{crear_Curso idCurso nombreCu duracion precio modalidad estado  intensidadhoraria descripcion cedulaEst}}}
+	{{>footer}}
